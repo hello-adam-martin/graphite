@@ -1,12 +1,19 @@
 <script>
 	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import { browser } from '$app/environment';
+
+	if (browser) {
+    	if(typeof window.zilPay !== 'undefined') {
+			console.log("ZilPay present");
+			const zilliqa = window.zilPay;
+			console.log(zilliqa.wallet.net);
+		}
+	}
+
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Graphite</title>
 </svelte:head>
 
 <section>
