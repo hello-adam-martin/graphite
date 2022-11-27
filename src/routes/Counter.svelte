@@ -6,6 +6,7 @@
 	const displayed_count = spring();
 	$: displayed_count.set(count);
 	$: offset = modulo($displayed_count, 1);
+	$: voteCost = count**2;
 
 	/**
 	 * @param {number} n
@@ -38,7 +39,16 @@
 	</button>
 </div>
 
+<p>
+	This vote will cost <b>{voteCost}</b> $GRPH
+</p>
+
 <style>
+		meter {
+			display: block;
+			width: 100%;
+		}
+
 	.counter {
 		display: flex;
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -56,6 +66,7 @@
 		background-color: transparent;
 		touch-action: manipulation;
 		font-size: 2rem;
+		cursor: pointer;
 	}
 
 	.counter button:hover {
