@@ -16,6 +16,10 @@
 		// handle negative numbers
 		return ((n % m) + m) % m;
 	}
+
+	function placeVote() {
+		alert(voteCost)
+	}
 </script>
 
 <div class="counter">
@@ -43,7 +47,7 @@
 <p>
 	This vote will cost <b>{voteCost}</b> $GRPH
 </p>
-<button>vote</button>
+<button on:click|once={placeVote}>vote</button>
 {:else}
 <p>
 	Please choose the number of votes.

@@ -10,11 +10,9 @@
 </svelte:head>
 
 <section>
-	<h1>
-		Graphite Voting
-	</h1>
+	<h1>CIP1 - Proposed by Carbon Labs.</h1>
 
-	<h2>Cast Your Vote</h2>
+	<h2>Lower the GRPH emmision rate for the GRPH / CARB pool.</h2>
 
 	<Counter />
 </section>
@@ -30,6 +28,8 @@
 
 	h1 {
 		width: 100%;
+		padding-bottom: 0;
+		margin-bottom: 0
 	}
 
 </style>
