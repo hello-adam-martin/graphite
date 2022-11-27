@@ -39,16 +39,24 @@
 	</button>
 </div>
 
+{#if voteCost}
 <p>
 	This vote will cost <b>{voteCost}</b> $GRPH
 </p>
+<button>vote</button>
+{:else}
+<p>
+	Please choose the number of votes.
+</p>
+{/if}
 
 <style>
-		meter {
-			display: block;
-			width: 100%;
-		}
 
+	button {
+		padding: 0.5em 2em;
+		cursor: pointer;
+	}
+		
 	.counter {
 		display: flex;
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
