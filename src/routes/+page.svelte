@@ -1,5 +1,5 @@
 <script>
-	import Counter from './Counter.svelte';
+	import SimpleVote from './SimpleVote.svelte';
 	import { browser } from '$app/environment';
 
 	if (browser) {
@@ -17,11 +17,7 @@
 </svelte:head>
 
 <section>
-	<h1>CIP1 - Proposed by Carbon Labs.</h1>
-
-	<h2>Lower the GRPH emmision rate for the GRPH / CARB pool.</h2>
-
-	<Counter />
+	<SimpleVote />
 </section>
 
 <style>

@@ -21,6 +21,10 @@
 		alert(voteCost)
 	}
 </script>
+<h1>CLIP1 - Proposed by Carbon Labs.</h1>
+
+	<h2>Lower the GRPH emmision rate for the GRPH / CARB pool to <b>4</b> GRPH per block.</h2>
+<p class='info'>This is an example of a simple proposal. The equivalent of a yes or no. If you agree with the proposal, then you would choose a positive amount. If you disagree then you would choose a negative amount.</p>
 
 <div class="counter">
 	<button on:click={() => (count -= 1)} aria-label="Decrease the counter by one">
@@ -47,7 +51,7 @@
 <p>
 	This vote will cost <b>{voteCost}</b> $GRPH
 </p>
-<button on:click|once={placeVote}>vote</button>
+<button on:click|once={placeVote}>place vote</button>
 {:else}
 <p>
 	Please choose the number of votes.
@@ -125,5 +129,11 @@
 	.hidden {
 		top: -100%;
 		user-select: none;
+	}
+	.info {
+		background: var(--color-bg-1);
+		border: 1px solid red;
+		padding: 0.5em;
+		opacity: 0.6
 	}
 </style>
