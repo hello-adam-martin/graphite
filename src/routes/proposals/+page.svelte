@@ -20,4 +20,9 @@
 
 <section>
 	<h1>Proposals</h1>
+	
 </section>
+
+<style>
+
+</style>

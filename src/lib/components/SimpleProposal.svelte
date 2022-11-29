@@ -51,6 +51,12 @@
 <p>
 	This vote will cost <b>{voteCost}</b> $GRPH
 </p>
+{#if count > 0 }
+<p class="info">You are voting in favour</p>
+{/if}
+{#if count < 1 }
+<p class="info">You are voting against</p>
+{/if}
 <button on:click|once={placeVote}>place vote</button>
 {:else}
 <p>
