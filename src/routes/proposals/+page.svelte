@@ -17,3 +17,7 @@
 	<title>Proposals</title>
 	<meta name="description" content="Graphite Proposals" />
 </svelte:head>
+
+<section>
+	<h1>Proposals</h1>
+</section>

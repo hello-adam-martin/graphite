@@ -1,5 +1,5 @@
 <script>
-	import SimpleVote from './SimpleVote.svelte';
+	import SimpleProposal from '$lib/components/SimpleProposal.svelte';
 	import { browser } from '$app/environment';
 
 	if (browser) {
@@ -17,22 +17,7 @@
 </svelte:head>
 
 <section>
-	<SimpleVote />
+	<SimpleProposal />
 </section>
 
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-		padding-bottom: 0;
-		margin-bottom: 0
-	}
-
-</style>
+<style></style>

@@ -30,6 +30,20 @@ body {
 		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
 }
 
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 0.6;
+}
+
+h1 {
+	width: 100%;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
 h1,
 h2,
 p {
