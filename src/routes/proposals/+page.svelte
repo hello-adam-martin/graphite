@@ -2,6 +2,8 @@
 	import { onMount } from 'svelte';
 	import { apiData, drinkNames } from './store.js';
 
+	//@todo - proposals should be coming from gundb linked to a reactive svelte prop
+
 	onMount(async () => {
   	fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon")
   		.then(response => response.json())
