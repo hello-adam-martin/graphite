@@ -4,47 +4,19 @@
 	import './styles.css';
 </script>
 
-<div class="app">
+<div class="flex flex-col min-h-screen">
 	<Header />
 
-	<main>
+	<main class="box-border flex flex-col flex-1 mx-auto max-w-5xl p-4 w-full">
 		<slot />
 	</main>
 
-	<footer>
+	<footer class="flex justify-center items-center p-3">
 		<p>Developed by Carbon Labs.</p>
 	</footer>
 </div>
 
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
 </style>
