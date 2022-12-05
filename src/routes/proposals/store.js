@@ -10,9 +10,9 @@ export const apiData = writable([]);
 For our use case, we only care about the drink names, not the other information.
 Here, we'll create a derived store to hold the drink names.
 **/
-export const drinkNames = derived(apiData, ($apiData) => {
+export const proposals = derived(apiData, ($apiData) => {
 	if ($apiData.drinks) {
-		return $apiData.drinks.map((drink) => drink.strDrink);
+		return $apiData.drinks.map((proposal) => proposal.strDrink);
 	}
 	return [];
 });
