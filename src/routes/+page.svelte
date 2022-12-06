@@ -16,7 +16,7 @@
 	<title>Graphite</title>
 </svelte:head>
 
-<section>
+<section class="flex flex-col flex-1 justify-center items-center">
 	<SimpleProposal />
 </section>
 

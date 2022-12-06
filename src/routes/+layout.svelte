@@ -1,6 +1,6 @@
 <script>
 	import Header from './Header.svelte';
-	import '../app.css';
+	import '../app.scss';
 	import './styles.css';
 </script>
 
@@ -12,11 +12,12 @@
 	</main>
 
 	<footer class="flex justify-center items-center p-3">
-		<p>Developed by Carbon Labs.</p>
+		<p class="color-3">Developed by Carbon Labs.</p>
 	</footer>
 </div>
 
 <style>
-
-
+	footer p {
+		color: var(--color-grayscale-2)
+	}
 </style>

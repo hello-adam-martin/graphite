@@ -22,10 +22,6 @@
 
 
 	// Call API to fetch proposals
-	
-	
-	
-
 	/*
 	var proposals = gun.get('proposals');
 	//proposals.set({title: "Proposal 1"});
@@ -49,7 +45,3 @@
 	{/each}
 	</ul>
 </section>
-
-<style>
-
-</style>

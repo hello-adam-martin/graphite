@@ -57,7 +57,7 @@
 {#if count < 1 }
 <p class="info">You are voting against</p>
 {/if}
-<button on:click|once={placeVote}>place vote</button>
+<button on:click|once={placeVote} class="bg-sky-500 hover:bg-sky-700">place vote</button>
 {:else}
 <p>
 	Please choose the number of votes.
@@ -66,10 +66,6 @@
 
 <style>
 
-	button {
-		padding: 0.5em 2em;
-		cursor: pointer;
-	}
 		
 	.counter {
 		display: flex;
