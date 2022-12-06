@@ -1,7 +1,8 @@
 <script>
 	import Header from './Header.svelte';
-	import '../app.scss';
-	import './styles.css';
+	import '$lib/styles/app.scss';
+	import '$lib/styles/theme.scss';
+	import '$lib/styles/styles.scss';
 </script>
 
 <div class="flex flex-col min-h-screen">
