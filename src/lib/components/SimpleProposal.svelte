@@ -22,9 +22,8 @@
 	}
 </script>
 <h1>CLIP1 - Proposed by Carbon Labs.</h1>
-
-	<h2>Lower the GRPH emmision rate for the GRPH / CARB pool to <b>4</b> GRPH per block.</h2>
-<p class='info'>This is an example of a simple proposal. The equivalent of a yes or no. If you agree with the proposal, then you would choose a positive amount. If you disagree then you would choose a negative amount.</p>
+<h2>Lower the GRPH emmision rate for the GRPH / CARB pool to <b>4</b> GRPH per block.</h2>
+<p>This is an example of a simple proposal. The equivalent of a yes or no. If you agree with the proposal, then you would choose a positive amount. If you disagree then you would choose a negative amount.</p>
 
 <div class="counter">
 	<button on:click={() => (count -= 1)} aria-label="Decrease the counter by one">
@@ -34,9 +33,9 @@
 	</button>
 
 	<div class="counter-viewport">
-		<div class="counter-digits" style="transform: translate(0, {100 * offset}%)">
+		<div class="counter-digits text-slate-400 text-5xl" style="transform: translate(0, {100 * offset}%)">
 			<strong class="hidden" aria-hidden="true">{Math.floor($displayed_count + 1)}</strong>
-			<strong>{Math.floor($displayed_count)}</strong>
+			<strong class="text-slate-400 text-5xl">{Math.floor($displayed_count)}</strong>
 		</div>
 	</div>
 
@@ -57,7 +56,7 @@
 {#if count < 1 }
 <p class="info">You are voting against</p>
 {/if}
-<button on:click|once={placeVote} class="bg-sky-500 hover:bg-sky-700">place vote</button>
+<button on:click|once={placeVote} >place vote</button>
 {:else}
 <p>
 	Please choose the number of votes.
@@ -116,8 +115,6 @@
 		width: 100%;
 		height: 100%;
 		font-weight: 400;
-		color: var(--color-theme-1);
-		font-size: 4rem;
 		align-items: center;
 		justify-content: center;
 	}
@@ -132,10 +129,5 @@
 		top: -100%;
 		user-select: none;
 	}
-	.info {
-		background: var(--color-bg-1);
-		border: 1px solid red;
-		padding: 0.5em;
-		opacity: 0.6
-	}
+
 </style>

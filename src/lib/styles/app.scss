@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-// create some grayscale values
-// use these for early development 
-@for $i from 0 through 10 {
-	:root {
-		--color-grayscale-#{$i}: hsl(0 0% #{$i * 10%});
+@layer components {
+	h1 {
+		@apply text-3xl pb-4 text-center;
+	}
+	h2 {
+		@apply text-xl pb-5 text-center;
 	}
 }
