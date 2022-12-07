@@ -9,4 +9,7 @@
 	h2 {
 		@apply text-xl pb-5 text-center;
 	}
+	button {
+		@apply bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow;
+	}
 }
