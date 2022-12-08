@@ -1,5 +1,6 @@
 <script>
 	import SimpleProposal from '$lib/components/SimpleProposal.svelte';
+	import SimpleVote from '$lib/components/SimpleVote.svelte';
 	import { browser } from '$app/environment';
 
 	if (browser) {
@@ -18,6 +19,7 @@
 
 <section class="flex flex-col flex-1 justify-center items-center">
 	<SimpleProposal />
+	<SimpleVote />
 </section>
 
 <style></style>
