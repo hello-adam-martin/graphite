@@ -1,6 +1,8 @@
 <script>
-	import SimpleProposal from '$lib/components/SimpleProposal.svelte';
-	import SimpleVote from '$lib/components/SimpleVote.svelte';
+
+	import ViewProposal from '$lib/features/ViewProposal.svelte';
+
+	/*
 	import { browser } from '$app/environment';
 
 	if (browser) {
@@ -10,6 +12,9 @@
 			console.log(zilliqa.wallet.net);
 		}
 	}
+*/
+
+$: voted = true;		// this needs to be checked via API
 
 </script>
 
@@ -18,8 +23,5 @@
 </svelte:head>
 
 <section class="flex flex-col flex-1 justify-center items-center">
-	<SimpleProposal />
-	<SimpleVote />
+	<ViewProposal />
 </section>
-
-<style></style>

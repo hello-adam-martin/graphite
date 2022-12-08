@@ -3,7 +3,7 @@
 	- Displays basic information about a simple proposal.
 -->
 
-<i>{proposal.proposalSmartContract}</i>
+<i>Contract: <a href="#">{proposal.proposalSmartContract}</a></i>
 <h1>{proposal.proposalId} - Proposed by {proposal.proposalAuthor}.</h1>
 <h2>{proposal.proposalTitle}</h2>
 <p>{proposal.proposalDescription}</p>
