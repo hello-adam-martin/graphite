@@ -6,6 +6,7 @@
   //$: voted = proposal.yourVote.amount;		// if this is not 0 then true
 	let voted = false;
 
+	//this is a hack to show the proposals with and without voting option.
 	import { page } from '$app/stores';
   if($page.params.proposal == "CLIP2") {
 		voted = true;
@@ -35,10 +36,6 @@
 	}
 
 </script>
-
-<svelte:head>
-	<title>Graphite</title>
-</svelte:head>
 
 {#if voted}
 	<ShowVote {proposal} />

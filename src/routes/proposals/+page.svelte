@@ -47,7 +47,8 @@
 
 <section>
 	<h1>Current Proposals</h1>
-	<ul>
+  <a href="/addproposal" class="text-center block">Add A New Proposal</a>
+	<ul class="mt-12">
 	{#each proposals as proposal}
 		<li><a href="/proposals/{proposal.proposalId}">{proposal.proposalId} - {proposal.proposalTitle.slice(0,40)}&hellip;</a></li>
 	{/each}
