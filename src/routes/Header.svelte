@@ -1,10 +1,10 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from '$lib/images/carblogo.png';
-	import github from '$lib/images/github.svg';
-
-	import { browser } from '$app/environment';
-
+  import { browser } from '$app/environment';
+	
+	$: avatarConnected = false;
+	
 	if (browser) {
     	if(typeof window.zilPay !== 'undefined') {
 			console.log("ZilPay present");
@@ -18,9 +18,9 @@
 </script>
 
 <header>
-
+	{#if !avatarConnected}
 	<div class="bg-red-300 text-white text-center">Your Avatar Is Not Connected</div>
-
+	{/if}
 	<nav>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>

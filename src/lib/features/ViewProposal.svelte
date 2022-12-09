@@ -3,7 +3,15 @@
 	import SimpleVote from '$lib/components/SimpleVote.svelte';
 	import ShowVote from '$lib/components/ShowVote.svelte';
 
-  $: voted = proposal.yourVote.amount;		// if this is not 0 then true
+  //$: voted = proposal.yourVote.amount;		// if this is not 0 then true
+	let voted = false;
+
+	import { page } from '$app/stores';
+  if($page.params.proposal == "CLIP2") {
+		voted = true;
+	} else {
+		voted = false;
+	}
 
 	//this should come from GunJS / API
 	let proposal = {
@@ -14,14 +22,14 @@
 	  proposalTitle: "Lower the GRPH emmision rate for the GRPH / CARB pool to 4 GRPH per block.",
 	  proposalDescription: "This is an example of a simple proposal. The equivalent of a yes or no. If you agree with the proposal, then you would choose a positive amount. If you disagree then you would choose a negative amount.",
 		proposalVotes: {
-			for: 11,
-			against: 17,
+			for: 13,
+			against: 56,
 		},
 		totalVoters: 79,
 		proposalValue: 12417,
 		yourVote: {
 			position: "against",
-			amount: 9,
+			amount: 3,
 			cost: 81
 		}
 	}
