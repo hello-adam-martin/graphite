@@ -19,6 +19,8 @@
 
 <header>
 
+	<div class="bg-red-300 text-white text-center">Your Avatar Is Not Connected</div>
+
 	<nav>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
