@@ -10,7 +10,7 @@
 		@apply text-xl pb-5 text-center;
 	}
 	button {
-		@apply bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow;
+		@apply bg-white hover:bg-gray-100 text-gray-800 font-semibold px-4 border border-gray-400 rounded shadow;
 	}
 	a {
 		@apply hover:text-slate-400 underline underline-offset-2 decoration-1 hover:no-underline;

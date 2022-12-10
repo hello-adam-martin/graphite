@@ -29,6 +29,12 @@
 			<li aria-current={$page.url.pathname === '/proposals' ? 'page' : undefined}>
 				<a href="/proposals">Proposals</a>
 			</li>
+			<li aria-current={$page.url.pathname === '/addproposal' ? 'page' : undefined}>
+				<a href="/addproposal">Add Proposal</a>
+			</li>
+			<li aria-current={$page.url.pathname === '/claimrewards' ? 'page' : undefined}>
+				<a href="/claimrewards">Claim Rewards</a>
+			</li>
 		</ul>
 	</nav>
 
