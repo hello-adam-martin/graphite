@@ -1,43 +1,20 @@
 <script>
-//this should come from GunJS / API
-	let proposals = [{
-		proposalSmartContract: "0x1213133",
-		proposalConfidenceTarget: 75,
-		proposalId: "CLIP1",
-	  proposalAuthor: "Carbon Labs",
-	  proposalTitle: "Lower the GRPH emmision rate for the GRPH / CARB pool to 4 GRPH per block.",
-	  proposalDescription: "This is an example of a simple proposal. The equivalent of a yes or no. If you agree with the proposal, then you would choose a positive amount. If you disagree then you would choose a negative amount.",
-		proposalVotes: {
-			for: 11,
-			against: 17,
-		},
-		totalVoters: 79,
-		proposalValue: 12417,
-		yourVote: {
-			position: "against",
-			amount: 9,
-			cost: 81
-		}
-	},
-  {
-		proposalSmartContract: "0x1213133",
-		proposalConfidenceTarget: 75,
-		proposalId: "CLIP2",
-	  proposalAuthor: "Carbon Labs",
-	  proposalTitle: "Another proposal.",
-	  proposalDescription: "Proposal description.",
-		proposalVotes: {
-			for: 1,
-			against:6,
-		},
-		totalVoters: 7,
-		proposalValue: 124,
-		yourVote: {
-			position: "against",
-			amount: 0,
-			cost: 0
-		}
-	}]
+	import { onMount } from 'svelte';
+	import { apiData, proposals } from '$lib/stores/proposalStore.js';
+	const apiURL = "https://x8ki-letl-twmt.n7.xano.io/api:dvhA5Xf0/proposals";
+
+	onMount(async () => {
+  	fetch(apiURL)
+  		.then(response => response.json())
+  		.then(data => {
+				//console.log(data);
+    		apiData.set(data);
+  		}).catch(error => {
+    		console.log(error);
+    		return [];
+  	});
+	});
+
 </script>
 
 <svelte:head>
@@ -45,12 +22,13 @@
 	<meta name="description" content="Graphite Proposals" />
 </svelte:head>
 
+
 <section>
 	<h1>Current Proposals</h1>
   <a href="/addproposal" class="text-center block">Add A New Proposal</a>
 	<ul class="mt-12">
-	{#each proposals as proposal}
-		<li><a href="/proposals/{proposal.proposalId}">{proposal.proposalId} - {proposal.proposalTitle.slice(0,40)}&hellip;</a></li>
+	{#each $proposals as proposal}
+		<li><a href="/proposals/{proposal.id}">{proposal.id} - {proposal.title.slice(0,40)}&hellip;</a></li>
 	{/each}
 	</ul>
 </section>
