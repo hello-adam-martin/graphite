@@ -1,6 +1,7 @@
 <script>
 	import Header from './Header.svelte';
 	import '$lib/styles/app.scss';
+
 </script>
 
 <div class="flex flex-col min-h-screen">

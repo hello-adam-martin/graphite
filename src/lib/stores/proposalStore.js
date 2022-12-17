@@ -1,17 +1,26 @@
-import { writable, derived } from 'svelte/store';
+const apiEndpoint = import.meta.env.VITE_PUBLIC_API_BASEURL;
 
-/** Store for your data. 
-This assumes the data you're pulling back will be an array.
-If it's going to be an object, default this to an empty object.
-**/
-export const apiData = writable([]);
+import { writable } from 'svelte/store';
 
-/** Data transformation.
-Here, we'll create a derived store to hold the proposal.
-**/
-export const proposals = derived(apiData, ($apiData) => {
-	if ($apiData) {
-		return $apiData.map((proposal) => proposal);
-	}
-	return [];
-});
+export const proposals = writable([]);
+
+export const loadProposals = async () => {
+	fetch(apiEndpoint + '/proposals')
+		.then((response) => response.json())
+		.then((data) => {
+			proposals.set(data);
+		})
+		.catch((error) => {
+			return console.error(error);
+		});
+};
+loadProposals();
+
+export const addProposal = async (proposalData) => {};
+
+/* move to voteStore */
+export const recordVote = async (proposalId, voteData) => {};
+export const claimRewards = async (proposalId, avatar) => {};
+
+/* this should be moved to an admin interface (retool) */
+export const deleteProposal = async (proposalId) => {};
