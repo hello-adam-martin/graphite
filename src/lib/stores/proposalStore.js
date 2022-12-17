@@ -4,10 +4,12 @@ import { writable } from 'svelte/store';
 
 export const proposals = writable([]);
 
+/* Load all proposals */
 export const loadProposals = async () => {
 	fetch(apiEndpoint + '/proposals')
 		.then((response) => response.json())
 		.then((data) => {
+			console.log(data);
 			proposals.set(data);
 		})
 		.catch((error) => {
@@ -15,6 +17,8 @@ export const loadProposals = async () => {
 		});
 };
 loadProposals();
+
+export const getProposal = async (proposalId) => {};
 
 export const addProposal = async (proposalData) => {};
 
